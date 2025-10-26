@@ -53,6 +53,7 @@ jobs:
         run: |
           $version = "${{ inputs.version }}"
           if ([string]::IsNullOrEmpty($version)) {
+              # 自动从 Cargo.toml 获取版本
               $version = (Get-Content Cargo.toml | Select-String 'version *= *"(.*)"').Matches[0].Groups[1].Value
           }
           Write-Host "Building RustDesk Windows EXE version $version"
