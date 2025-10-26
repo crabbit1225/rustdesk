@@ -9,4 +9,5 @@ jobs:
     with:
       build-platforms: windows
       upload-artifact: true
-      version: 1.3.0
+      # 可选：这里可以手动指定版本号，例如 "1.3.0"
+      # version: 1.3.0
